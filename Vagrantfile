@@ -9,8 +9,8 @@ Vagrant.configure("2") do |config|
   # create mgmt node
   config.vm.define :mgmt do |mgmt_config|
       mgmt_config.vm.box = "centos/7"
-      mgmt_config.vm.hostname = "mgmt"
-      mgmt_config.vm.network :private_network, ip: "10.0.0.10"
+      mgmt_config.vm.hostname = "slave"
+      mgmt_config.vm.network :private_network, ip: "10.0.0.20"
       mgmt_config.vm.provider "virtualbox" do |vb|
         vb.memory = "256"
       end
